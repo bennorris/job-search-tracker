@@ -1,0 +1,52 @@
+/*//////////// HOME PAGE /////////////////*/
+body {
+  background-color: #EEEEEE;
+}
+.jobbies {
+  text-align: center;
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+.jobbies h1 {
+  font-size: 60px;
+  color: #311B92;
+}
+
+.jobbies h2 {
+  font-size: 50px;
+}
+
+.intro-button {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 60px;
+  display: inline-block;
+  margin: 2%;
+  border-radius: 15%;
+}
+
+#job-button  {
+  background-color: white;
+  color: #311B92;
+  border: 12px solid #616161;
+  padding: 3%;
+
+}
+#companies-button {
+  background-color: white;
+  color: #311B92;
+  border: 12px solid #616161;
+  padding: 3%;
+}
+#contacts-button {
+  background-color: white;
+  color: #311B92;
+  border: 12px solid #616161;
+  padding: 3%;
+}
+
+
+#contacts-button:hover, #companies-button:hover, #job-button:hover {
+  background-color: #311B92;
+  color: white;
+  border: none;
+}

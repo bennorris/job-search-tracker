@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JobSearchTracker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Reem+Kufi" rel="stylesheet">
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body ng-app="app">
+    <%= yield %>
+  </body>
+</html>
