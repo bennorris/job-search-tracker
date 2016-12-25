@@ -1,15 +1,29 @@
 /*//////////// HOME PAGE /////////////////*/
+html {
+  margin: 0;
+}
+
 body {
-  background-color: #EEEEEE;
+  height: 100%;
+  width: 100%;
+  margin-top: 0%;
+  /*background-color: #EEEEEE;*/
+  /*background-image: url(https://s29.postimg.org/pkwylq9g7/blefs8_wzhm_breather.jpg);*/
 }
 .jobbies {
   text-align: center;
   font-family: 'Reem Kufi', sans-serif;
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
 }
 
 .jobbies h1 {
   font-size: 60px;
   color: #311B92;
+  padding-top: 8%;
+  text-shadow: 1px 0 white;
+  margin-top: 0%;
 }
 
 .jobbies h2 {
