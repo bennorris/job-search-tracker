@@ -64,3 +64,130 @@ body {
   color: white;
   border: none;
 }
+
+/*//////////// JOBS PAGE //////////*/
+
+.new-job-form {
+  text-align: left;
+  margin-left: 10%;
+}
+.new-job-form form {
+  font-family: 'Reem Kufi', sans-serif;
+  padding-top: 2%;
+  padding-left: 8%;
+  font-size: 35px;
+  background-color: gainsboro;
+  border-top: 5px solid gray;
+}
+
+.new-job-form input {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 30px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.jobs-page-button {
+  background-color: #311B92;
+  color: white;
+  padding: 3%;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 40px;
+}
+
+.jobs-page-button:hover {
+  color: yellow;
+  border: 5px solid darkgray;
+}
+
+.jobs-page {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 4%;
+}
+
+.jobs-list {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 25px;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-top: 2%;
+  background-color: gainsboro;
+  border-top: 8px solid gray;
+  height: 100%;
+}
+
+#search-jobs {
+  margin-left: 5%;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 25px;
+  width: 35%;
+  margin-bottom: 1%;
+  border: 5px solid #311B92;
+  color: #311B92;
+}
+
+.job-body {
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+}
+
+.job-body button {
+  margin-top: 10%;
+  margin-right: 2%;
+}
+
+.after-post {
+  font-family: 'Reem Kufi', sans-serif;
+  color: #311B92;
+  margin-left: 4%;
+}
+
+#filter-job {
+  margin: 0;
+  font-family: 'Reem Kufi', sans-serif;
+  color: #311B92;
+  font-size: 18px;
+  border: 2px solid #311B92;
+  background-color: white;
+}
+
+#filter-job:hover {
+  color: white;
+  background-color: #311B92;
+  border: none;
+}
+
+.filter-buttons {
+  display: inline;
+}
+
+.filter-buttons p {
+  margin-left: 5%;
+  font-family: 'Reem Kufi', sans-serif;
+  color: #311B92;
+  font-size: 18px;
+}
+
+/*////////// NAVBAR ///////////////*/
+
+nav {
+  list-style-type: none;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: #311B92;
+}
+
+nav li {
+  display: inline-block;
+  font-family: 'Reem Kufi', sans-serif;
+  color: white;
+  padding: 0.75%;
+  font-size: 19px;
+}
+
+nav li:hover {
+  color: yellow;
+}

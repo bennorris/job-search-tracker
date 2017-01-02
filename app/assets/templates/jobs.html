@@ -1,1 +1,36 @@
-THIS WILL BE THE JOBS PAGE.
+<div class="job-body" ng-style="bodyImage">
+
+<div class="jobs-page">
+  <button type="button" class="jobs-page-button" ng-click="showJobs()">Add a New Job</button>
+  <button type="button" class="jobs-page-button" ng-click="appendJobs()">View Your Jobs List</button>
+</div>
+
+<h1 class="after-post">{{ success }}</h1>
+<div class="new-job-form" style="display:{{jobFormDisplay}}">
+<form class="" method="post" ng-submit="submit()">
+  <label for="job-company">Company: </label><input type="text" name="job-company" ng-model="company" required><br>
+  <label for="job-title">Title: </label><input type="text" name="job-title" ng-model="title" required><br>
+  <label for="job-description">Description: </label><input type="text" name="job-description" ng-model="description" required><br>
+  <label for="job-link">Link: </label><input type="text" name="job-link" ng-model="link" required><br>
+  <label>Applied? </label><input type="radio" ng-model="applied" value="yes">Yes <input ng-model="applied" type="radio" value="no">Not Yet
+
+  <input type="submit" id="submit" value="Submit" />
+</form>
+</div>
+
+<div class="filter-buttons" style="display:{{listDisplay}}">
+<input id="search-jobs" type="text" class="jobs-searchbox" placeholder="search your saved jobs" ng-model="searchJobs"></input><br>
+<p>Filter by:&nbsp;&nbsp;<button id="filter-job" type="button" name="button" ng-click="myFilter = none">All</button>&nbsp;&nbsp;<button id="filter-job" type="button" name="button" ng-click="myFilter = applied">Applied</button>&nbsp;&nbsp;
+<button id="filter-job"  type="button" name="button" ng-click="myFilter = notApplied">Haven't Applied</button>
+</p>
+</div>
+<div style="display:{{listDisplay}}" class="jobs-list" ng-repeat="job in jobList | filter:searchJobs | filter:myFilter">
+  <ul>
+      <li>Company: {{job.company.name}} <br>
+      <li>Title: {{job.title}} <br>
+      <li>Description: {{job.description}} </br>
+      <li><a href="{{job.link}}" target="_blank">Link</a>
+      <li>Applied?&nbsp;&nbsp;<i class="fa fa-check-circle-o" aria-hidden="true" style="color:{{applicationStatus(job)}}"></i></li>
+  </ul>
+</div>
+</div>
