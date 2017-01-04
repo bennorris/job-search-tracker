@@ -1,12 +1,12 @@
 <div class="contacts-body" ng-style="bodyImage">
 
 
-<button type="button" class="contacts-page-button" ng-click="activateForm()">Add Contact</button>
-<button type="button" class="contacts-page-button" ng-click="getContacts()">View Contacts</button>
+<button type="button" class="item-button" ng-click="activateForm()">Add Contact</button>
+<button type="button" class="item-button" ng-click="getContacts()">View Contacts</button>
 
 <h1>{{ success }}</h1>
 
-<div class="new-contact-form" style="display: {{contactForm}}">
+<div class="new-item-form" style="display: {{contactForm}}">
 <form ng-submit="createContact()" method="post">
   <label for="contact-name">Name: </label><input name="contact-name" type="text" ng-model="name"><br>
   <label for="contact-company">Company: </label><input name="contact-company"type="text" ng-model="company"><br>

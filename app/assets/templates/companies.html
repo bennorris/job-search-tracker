@@ -1,3 +1,28 @@
 <div class="contacts-body" ng-style="bodyImage">
 
+  <button type="button" class="item-button" ng-click="activateForm()">Add Company</button>
+  <button type="button" class="item-button" ng-click="getCompanies()">View Companies</button>
+
+  <h1>{{ success }}</h1>
+
+  <div class="new-item-form" style="display: {{companyForm}}">
+  <form ng-submit="createCompany()" method="post">
+    <label for="contact-name">Name: </label><input name="contact-name" type="text" ng-model="name"><br>
+    <label for="contact-company">Website: </label><input name="contact-company"type="text" ng-model="website"><br>
+    <label for="contact-email">Description: </label><input name="contact-email" type="text" ng-model="description"><br>
+    <label for="contact-notes">Notes: </label><input name="contact-notes" type="text" ng-model="notes"><br>
+    <input type="submit" id="submit-new-contact" value="Submit" />
+  </form>
+  </div>
+
+  <div class="contact-list" style="display: {{listDisplay}}" ng-repeat="company in companies | companyFilter">
+    <ul>
+      <li>Name: {{company.name}} </li>
+      <li>Website: {{company.website}} </li>
+      <li>Description: {{company.description}} </li>
+      <li>Notes: {{company.notes}} <input style="display: {{editDisplay}}" id="edit-note" type="submit" value="edit" ng-click="showNoteForm()"></li>
+      <li style="display: {{noteHide}}"><input ng-model="company.notes" type="text" value="{{company.notes}}"></li>
+    </ul>
+  </div>
+
 </div>

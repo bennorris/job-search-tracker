@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/all_jobs' => 'jobs#show'
   post '/new_contact' => 'contacts#create'
   get '/all_contacts' => 'contacts#show'
+  get '/all_companies' => 'companies#show'
+  post '/new_company' => 'companies#create'
   get '*path' => 'application#index'
 
 end
