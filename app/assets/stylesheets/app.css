@@ -7,6 +7,7 @@ body {
   height: 100%;
   width: 100%;
   margin-top: 0%;
+  margin: 0;
   /*background-color: #EEEEEE;*/
   /*background-image: url(https://s29.postimg.org/pkwylq9g7/blefs8_wzhm_breather.jpg);*/
 }
@@ -78,6 +79,7 @@ body {
   font-size: 35px;
   background-color: gainsboro;
   border-top: 5px solid gray;
+  border-bottom: 5px solid gray;
 }
 
 .new-job-form input {
@@ -134,7 +136,7 @@ body {
 }
 
 .job-body button {
-  margin-top: 10%;
+  margin-top: 15%;
   margin-right: 2%;
 }
 
@@ -166,7 +168,7 @@ body {
 .filter-buttons p {
   margin-left: 5%;
   font-family: 'Reem Kufi', sans-serif;
-  color: #311B92;
+  color: white;
   font-size: 18px;
 }
 
@@ -180,14 +182,121 @@ nav {
   background-color: #311B92;
 }
 
-nav li {
+nav li, nav li a {
   display: inline-block;
   font-family: 'Reem Kufi', sans-serif;
   color: white;
   padding: 0.75%;
   font-size: 19px;
+  text-decoration: none;
 }
 
-nav li:hover {
+nav li:hover, nav li a:hover {
   color: yellow;
+}
+
+#applied-button, #submit-new-job, #submit-new-contact {
+  margin-top: 0;
+  margin-left: 1%;
+  font-family: 'Reem Kufi', sans-serif;
+  color: #311B92;
+  border: 3px solid #311B92;
+  background-color: white;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+#applied-button:hover, #submit-new-job:hover, #submit-new-contact:hover {
+  background-color: #311B92;
+  color: white;
+}
+
+/*////////// CONTACTS PAGE /////////?*/
+
+.contacts-body {
+  text-align: center;
+}
+
+.contacts-page-button {
+  background-color: #311B92;
+  color: white;
+  padding: 3%;
+  font-size: 40px;
+  margin-top: 10%;
+  margin-right: 2%;
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+.contacts-page-button:hover {
+  color: yellow;
+  border: 5px solid darkgray;
+}
+
+.new-contact-form {
+  margin-top: 2%;
+  text-align:left;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 30px;
+  background-color: gainsboro;
+}
+
+/*.new-job-form form {
+  font-family: 'Reem Kufi', sans-serif;
+  padding-top: 2%;
+  padding-left: 8%;
+  font-size: 35px;
+  background-color: gainsboro;
+  border-top: 5px solid gray;
+  border-bottom: 5px solid gray;
+}*/
+
+.new-contact-form form {
+  padding-left: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: gainsboro;
+  width: 100%;
+}
+
+.new-contact-form input {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 30px;
+  margin-bottom: 0.75%;
+}
+
+.contact-list {
+  text-align: left;
+}
+
+.contact-list ul{
+  background-color: gainsboro;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 4px solid gray;
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 25px;
+  padding-left: 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-list input {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 25px;
+}
+
+#edit-note {
+  font-family: 'Reem Kufi', sans-serif;
+  margin-left: 2%;
+}
+
+.contacts-body {
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+}
+
+#submit-new-contact {
+  margin-left: 0;
+  margin-top: 1%;
 }

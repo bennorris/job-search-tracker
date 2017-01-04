@@ -13,14 +13,13 @@
   <label for="job-description">Description: </label><input type="text" name="job-description" ng-model="description" required><br>
   <label for="job-link">Link: </label><input type="text" name="job-link" ng-model="link" required><br>
   <label>Applied? </label><input type="radio" ng-model="applied" value="yes">Yes <input ng-model="applied" type="radio" value="no">Not Yet
-
-  <input type="submit" id="submit" value="Submit" />
+  <input type="submit" id="submit-new-job" value="Submit" />
 </form>
 </div>
 
 <div class="filter-buttons" style="display:{{listDisplay}}">
 <input id="search-jobs" type="text" class="jobs-searchbox" placeholder="search your saved jobs" ng-model="searchJobs"></input><br>
-<p>Filter by:&nbsp;&nbsp;<button id="filter-job" type="button" name="button" ng-click="myFilter = none">All</button>&nbsp;&nbsp;<button id="filter-job" type="button" name="button" ng-click="myFilter = applied">Applied</button>&nbsp;&nbsp;
+<p><button id="filter-job" type="button" name="button" ng-click="myFilter = none">All</button>&nbsp;&nbsp;<button id="filter-job" type="button" name="button" ng-click="myFilter = applied">Applied</button>&nbsp;&nbsp;
 <button id="filter-job"  type="button" name="button" ng-click="myFilter = notApplied">Haven't Applied</button>
 </p>
 </div>
@@ -30,7 +29,7 @@
       <li>Title: {{job.title}} <br>
       <li>Description: {{job.description}} </br>
       <li><a href="{{job.link}}" target="_blank">Link</a>
-      <li>Applied?&nbsp;&nbsp;<i class="fa fa-check-circle-o" aria-hidden="true" style="color:{{applicationStatus(job)}}"></i></li>
+        <li>Applied?&nbsp;&nbsp;<i class="fa fa-check-circle-o" aria-hidden="true" style="{{applicationStatus(job)}}"></i><button type="button" id="applied-button" style="{{appliedButton(job)}}" ng-click="justApplied(job)">applied</button></li>
   </ul>
 </div>
 </div>

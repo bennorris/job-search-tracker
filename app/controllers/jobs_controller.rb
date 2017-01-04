@@ -20,6 +20,12 @@ class JobsController < ApplicationController
     end
   end
 
+  def update
+    @job = Job.find_by_id(params[:id])
+    @job.applied = "yes"
+    @job.save
+  end
+
 
 
 end

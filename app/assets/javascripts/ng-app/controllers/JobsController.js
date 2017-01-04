@@ -3,15 +3,14 @@ function JobsController($scope, NewJobService, GetJobs, $http) {
   $scope.list = [];
   $scope.jobFormDisplay = "none";
   $scope.listDisplay = "none";
-  $scope.url = 'https://s29.postimg.org/6eihjzjon/ravenna.png'
-  $scope.bodyImage = {background: "url(" + $scope.url + ") "};
+  $scope.url = 'https://s30.postimg.org/pobizjc4h/es_bhqwdnd4_dmitri_popov.jpg';
+  $scope.bodyImage = {background: "url(" + $scope.url + ") no-repeat fixed center center / cover"};
   var formOpen = false;
   var listOpen = false;
   $scope.applied = "darkgray";
 
 
   $scope.submit = function() {
-    console.log(this);
       $scope.list.push(this.company);
       $scope.list.push(this.title);
       $scope.list.push(this.description);
@@ -53,7 +52,6 @@ function JobsController($scope, NewJobService, GetJobs, $http) {
     GetJobs
       .grabResults()
       .then(function(res) {
-        console.log(res.data);
         $scope.jobList = res.data;
       })
     if (formOpen === true) {
@@ -79,11 +77,28 @@ function JobsController($scope, NewJobService, GetJobs, $http) {
 
   $scope.applicationStatus = function(job) {
     if (job.applied == "no") {
-      return "darkgray";
+      return "color: darkgray";
     } else if (job.applied == "yes") {
-      return "green";
+      return "color: green";
     }
   }
+
+  $scope.justApplied = function(job) {
+    if (job.applied == "no") {
+      $http({ method: 'PATCH', url: "/edit_job", data: (job) })
+      }
+
+    $scope.applicationStatus(job);
+    }
+
+
+  $scope.appliedButton = function(job) {
+    if (job.applied == "yes") {
+      return 'display: none';
+    }
+  }
+
+
 
 }
 
